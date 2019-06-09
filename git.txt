@@ -1,0 +1,1724 @@
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git config --global user.name "Hope9700"
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git config --global user.email "most.wanted20160@gmail.com"
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git config --global core.autocrlf input
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git config --global core.safecrlf true
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git config --global core.autocrlf true
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git config --global core.safecrlf true
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git config --global core.quotepath off
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ mkdir hello
+touch hello.html
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ cd hello
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello
+$ touch hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello
+$ git init
+Initialized empty Git repository in C:/Users/mostw/hello/.git/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "First Commit"
+[master (root-commit) 8da0398] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   hello.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   hello.html
+
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit
+[master be7bfdf] Added h1 tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   hello.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   hello.html
+
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Added standard HTML page tags"
+[master 02e5a39] Added standard HTML page tags
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   hello.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add .
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   hello.html
+
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Added HTML header"
+[master 0568a2d] Added HTML header
+ 1 file changed, 2 insertions(+)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git log
+commit 0568a2dc631b5b8ccb268067dc04feb195223576 (HEAD -> master)
+Author: Hope9700 <most.wanted20160@gmail.com>
+Date:   Sun Jun 9 23:11:47 2019 +0300
+
+    Added HTML header
+
+commit 02e5a39277142256a2987f92509692ddc544c5d1
+Author: Hope9700 <most.wanted20160@gmail.com>
+Date:   Sun Jun 9 23:10:13 2019 +0300
+
+    Added standard HTML page tags
+
+commit be7bfdfd082af01a02ab4dec34fcf0500cb396cd
+Author: Hope9700 <most.wanted20160@gmail.com>
+Date:   Sun Jun 9 23:03:46 2019 +0300
+
+    Added h1 tag
+
+commit 8da039807b9640f85105c719e85999525d63268a
+Author: Hope9700 <most.wanted20160@gmail.com>
+Date:   Sun Jun 9 22:58:29 2019 +0300
+
+    First Commit
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git log --pretty=oneline
+0568a2dc631b5b8ccb268067dc04feb195223576 (HEAD -> master) Added HTML header
+02e5a39277142256a2987f92509692ddc544c5d1 Added standard HTML page tags
+be7bfdfd082af01a02ab4dec34fcf0500cb396cd Added h1 tag
+8da039807b9640f85105c719e85999525d63268a First Commit
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git log --pretty=oneline --max-count=2
+0568a2dc631b5b8ccb268067dc04feb195223576 (HEAD -> master) Added HTML header
+02e5a39277142256a2987f92509692ddc544c5d1 Added standard HTML page tags
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git log --pretty=oneline --since='5 minutes ago'
+0568a2dc631b5b8ccb268067dc04feb195223576 (HEAD -> master) Added HTML header
+02e5a39277142256a2987f92509692ddc544c5d1 Added standard HTML page tags
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git log --pretty=oneline --until='5 minutes ago'
+be7bfdfd082af01a02ab4dec34fcf0500cb396cd Added h1 tag
+8da039807b9640f85105c719e85999525d63268a First Commit
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git log --pretty=oneline --author=Hope9700
+0568a2dc631b5b8ccb268067dc04feb195223576 (HEAD -> master) Added HTML header
+02e5a39277142256a2987f92509692ddc544c5d1 Added standard HTML page tags
+be7bfdfd082af01a02ab4dec34fcf0500cb396cd Added h1 tag
+8da039807b9640f85105c719e85999525d63268a First Commit
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git log --pretty=oneline --all
+0568a2dc631b5b8ccb268067dc04feb195223576 (HEAD -> master) Added HTML header
+02e5a39277142256a2987f92509692ddc544c5d1 Added standard HTML page tags
+be7bfdfd082af01a02ab4dec34fcf0500cb396cd Added h1 tag
+8da039807b9640f85105c719e85999525d63268a First Commit
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'
+0568a2d Sun Jun 9 23:11:47 2019 +0300 Added HTML header (Hope9700)
+02e5a39 Sun Jun 9 23:10:13 2019 +0300 Added standard HTML page tags (Hope9700)
+be7bfdf Sun Jun 9 23:03:46 2019 +0300 Added h1 tag (Hope9700)
+8da0398 Sun Jun 9 22:58:29 2019 +0300 First Commit (Hope9700)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+* 0568a2d 2019-06-09 | Added HTML header (HEAD -> master) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git config --global alias.co checkout
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+git config --global alias.type 'cat-file -t'
+git config --global alias.dump 'cat-file -p'
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git config --global alias.ci commit
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git config --global alias.st status
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git config --global alias.br branch
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git config --global alias.type 'cat-file -t'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git config --global alias.dump 'cat-file -p'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist
+* 0568a2d 2019-06-09 | Added HTML header (HEAD -> master) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout 8da0398
+Note: checking out '8da0398'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 8da0398 First Commit
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello ((8da0398...))
+$ cat hello.html
+Hello, World
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello ((8da0398...))
+$ git checkout master
+Previous HEAD position was 8da0398 First Commit
+Switched to branch 'master'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cat hello.html
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git tag v1
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout v1^
+Note: checking out 'v1^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 02e5a39 Added standard HTML page tags
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello ((02e5a39...))
+$ cat hello.html
+<html>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello ((02e5a39...))
+$ git tag v1-beta
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello ((v1-beta))
+$ git checkout v1
+Previous HEAD position was 02e5a39 Added standard HTML page tags
+HEAD is now at 0568a2d Added HTML header
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello ((v1))
+$ git checkout v1-beta
+Previous HEAD position was 0568a2d Added HTML header
+HEAD is now at 02e5a39 Added standard HTML page tags
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello ((v1-beta))
+$ git tag
+v1
+v1-beta
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello ((v1-beta))
+$ git hist master --all
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1, master) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (HEAD, tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello ((v1-beta))
+$ git checkout master
+Previous HEAD position was 02e5a39 Added standard HTML page tags
+Switched to branch 'master'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   hello.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout hello.html
+cat hello.htmlUpdated 1 path from the index
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cat hello.html
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   hello.html
+
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git reset HEAD hello.html
+Unstaged changes after reset:
+M       hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout hello.html
+Updated 1 path from the index
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Oops, we didn't want this commit"
+[master 265fd50] Oops, we didn't want this commit
+ 1 file changed, 1 insertion(+)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git revert HEAD
+[master 9183da5] Revert "Oops, we didn't want this commit"
+ 1 file changed, 1 deletion(-)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist
+* 9183da5 2019-06-09 | Revert "Oops, we didn't want this commit" (HEAD -> master) [Hope9700]
+* 265fd50 2019-06-09 | Oops, we didn't want this commit [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist
+* 9183da5 2019-06-09 | Revert "Oops, we didn't want this commit" (HEAD -> master) [Hope9700]
+* 265fd50 2019-06-09 | Oops, we didn't want this commit [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git tag oops
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git reset --hard v1
+HEAD is now at 0568a2d Added HTML header
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist
+* 0568a2d 2019-06-09 | Added HTML header (HEAD -> master, tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist --all
+* 9183da5 2019-06-09 | Revert "Oops, we didn't want this commit" (tag: oops) [Hope9700]
+* 265fd50 2019-06-09 | Oops, we didn't want this commit [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (HEAD -> master, tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git tag -d oops
+Deleted tag 'oops' (was 9183da5)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist --all
+* 0568a2d 2019-06-09 | Added HTML header (HEAD -> master, tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Add an author comment"
+[master ac3bebf] Add an author comment
+ 1 file changed, 1 insertion(+)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit --amend -m "Add an author/email comment"
+[master 8a38b32] Add an author/email comment
+ Date: Sun Jun 9 23:53:46 2019 +0300
+ 1 file changed, 1 insertion(+)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist
+* 8a38b32 2019-06-09 | Add an author/email comment (HEAD -> master) [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ mkdir lib
+git status
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git mv hello.html lib
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        renamed:    hello.html -> lib/hello.html
+
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Moved hello.html to lib"
+[master 2be3e58] Moved hello.html to lib
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename hello.html => lib/hello.html (100%)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Added index.html."
+On branch master
+Untracked files:
+        lib/index.html
+
+nothing added to commit but untracked files present
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Added index.html."
+On branch master
+nothing to commit, working tree clean
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ ls -C .git
+COMMIT_EDITMSG  description  hooks/  info/  objects/   refs/
+config          HEAD         index   logs/  ORIG_HEAD
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ ls -C .git/objects
+02/  0d/  15/  26/  2d/  53/  80/  8d/  9d/  a6/  b9/  c8/  info/
+05/  10/  18/  2b/  3e/  58/  8a/  91/  a1/  ac/  be/  d3/  pack/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ ls -C .git/objects/<dir>
+bash: syntax error near unexpected token `newline'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ ls -C .git/objects/80
+7ed910f1604fddec377910c9f15eaa59856a17
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        ignorecase = true
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ ls .git/refs
+ls .git/refs/tags
+cat .git/refs/tags/v1heads/  tags/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ ls .git/refs/heads
+master
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ ls .git/refs/tags
+v1  v1-beta
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cat .git/refs/tags/v1
+0568a2dc631b5b8ccb268067dc04feb195223576
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cat .git/HEAD
+ref: refs/heads/master
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist --max-count=1
+* 2be3e58 2019-06-09 | Moved hello.html to lib (HEAD -> master) [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git cat-file -t <hash>
+bash: syntax error near unexpected token `newline'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git cat-file -p <hash>
+bash: syntax error near unexpected token `newline'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git cat-file -t 8da0398
+commit
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git cat-file -p 8da0398
+tree a198ffba84d1d96ed776697f6cd9a8a36f2bca3c
+author Hope9700 <most.wanted20160@gmail.com> 1560110309 +0300
+committer Hope9700 <most.wanted20160@gmail.com> 1560110309 +0300
+
+First Commit
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git cat-file -p 0568a2d
+tree b994444e787c375d6cf39fe5914fb3783bbafdeb
+parent 02e5a39277142256a2987f92509692ddc544c5d1
+author Hope9700 <most.wanted20160@gmail.com> 1560111107 +0300
+committer Hope9700 <most.wanted20160@gmail.com> 1560111107 +0300
+
+Added HTML header
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git cat-file -p b994444
+100644 blob 807ed910f1604fddec377910c9f15eaa59856a17    hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git cat-file -p 807ed910
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout -b style
+Switched to a new branch 'style'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git status
+On branch style
+nothing to commit, working tree clean
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ touch lib/style.css
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ touch lib/index.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git add lib/style.css
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git commit -m "Added css stylesheet"
+[style 086970a] Added css stylesheet
+ 1 file changed, 3 insertions(+)
+ create mode 100644 lib/style.css
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git add lib/hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git commit -m "Hello uses style.css"
+[style 97eef7b] Hello uses style.css
+ 1 file changed, 1 insertion(+)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git commit -m "Updated index.html"
+On branch style
+Untracked files:
+        lib/index.html
+
+nothing added to commit but untracked files present
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ cd index
+bash: cd: index: No such file or directory
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git add lib index.html
+fatal: pathspec 'index.html' did not match any files
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git add/index.html
+git: 'add/index.html' is not a git command. See 'git --help'.
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ cd lib/index.html
+bash: cd: lib/index.html: Not a directory
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ touch index.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git add index.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git add index.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git commit -m "Updated index.html"
+[style c436b8c] Updated index.html
+ 1 file changed, 8 insertions(+)
+ create mode 100644 index.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git hist --all
+* c436b8c 2019-06-10 | Updated index.html (HEAD -> style) [Hope9700]
+* 97eef7b 2019-06-10 | Hello uses style.css [Hope9700]
+* 086970a 2019-06-10 | Added css stylesheet [Hope9700]
+* 2be3e58 2019-06-09 | Moved hello.html to lib (master) [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git checkout master
+Switched to branch 'master'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cat lib/hello.html
+<!-- Author: Hope9700 (most.wanted20160@gmail.com) -->
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout style
+Switched to branch 'style'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ cat lib/hello.html
+<!-- Author: Hope9700 (most.wanted20160@gmail.com) -->
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" media="all" href="style.css" />
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git checkout master
+Switched to branch 'master'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add README
+fatal: pathspec 'README' did not match any files
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ touch README
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add README
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Added README"
+[master f29fdfc] Added README
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist --all
+* f29fdfc 2019-06-10 | Added README (HEAD -> master) [Hope9700]
+| * c436b8c 2019-06-10 | Updated index.html (style) [Hope9700]
+| * 97eef7b 2019-06-10 | Hello uses style.css [Hope9700]
+| * 086970a 2019-06-10 | Added css stylesheet [Hope9700]
+|/
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout style
+git hist --allSwitched to branch 'style'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git merge master
+Merge made by the 'recursive' strategy.
+ README | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git hist --all
+*   8d3bd8b 2019-06-10 | t hist --allMerge branch 'master' into style (HEAD -> style) [Hope9700]
+|\
+| * f29fdfc 2019-06-10 | Added README (master) [Hope9700]
+* | c436b8c 2019-06-10 | Updated index.html [Hope9700]
+* | 97eef7b 2019-06-10 | Hello uses style.css [Hope9700]
+* | 086970a 2019-06-10 | Added css stylesheet [Hope9700]
+|/
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git checkout style
+Already on 'style'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git merge master
+Already up to date.
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git checkout master
+Switched to branch 'master'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add lib/hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m 'Life is great!'
+[master 309d438] Life is great!
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist --all
+* 309d438 2019-06-10 | Life is great! (HEAD -> master) [Hope9700]
+| *   8d3bd8b 2019-06-10 | t hist --allMerge branch 'master' into style (style) [Hope9700]
+| |\
+| |/
+|/|
+* | f29fdfc 2019-06-10 | Added README [Hope9700]
+| * c436b8c 2019-06-10 | Updated index.html [Hope9700]
+| * 97eef7b 2019-06-10 | Hello uses style.css [Hope9700]
+| * 086970a 2019-06-10 | Added css stylesheet [Hope9700]
+|/
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout style
+Switched to branch 'style'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git merge master
+Auto-merging lib/hello.html
+CONFLICT (content): Merge conflict in lib/hello.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style|MERGING)
+$ git add lib/hello.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style|MERGING)
+$ git commit -m "Merged master fixed conflict."
+[style 5f8d36d] Merged master fixed conflict.
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git checkout style
+Already on 'style'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git hist
+*   5f8d36d 2019-06-10 | Merged master fixed conflict. (HEAD -> style) [Hope9700]
+|\
+| * 309d438 2019-06-10 | Life is great! (master) [Hope9700]
+* |   8d3bd8b 2019-06-10 | t hist --allMerge branch 'master' into style [Hope9700]
+|\ \
+| |/
+| * f29fdfc 2019-06-10 | Added README [Hope9700]
+* | c436b8c 2019-06-10 | Updated index.html [Hope9700]
+* | 97eef7b 2019-06-10 | Hello uses style.css [Hope9700]
+* | 086970a 2019-06-10 | Added css stylesheet [Hope9700]
+|/
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git reset --hard c436b8c
+HEAD is now at c436b8c Updated index.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git hist --all
+* 309d438 2019-06-10 | Life is great! (master) [Hope9700]
+* f29fdfc 2019-06-10 | Added README [Hope9700]
+| * c436b8c 2019-06-10 | Updated index.html (HEAD -> style) [Hope9700]
+| * 97eef7b 2019-06-10 | Hello uses style.css [Hope9700]
+| * 086970a 2019-06-10 | Added css stylesheet [Hope9700]
+|/
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git checkout master
+Switched to branch 'master'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist
+* 309d438 2019-06-10 | Life is great! (HEAD -> master) [Hope9700]
+* f29fdfc 2019-06-10 | Added README [Hope9700]
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git reset --hard f29fdfc
+HEAD is now at f29fdfc Added README
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist --all
+* f29fdfc 2019-06-10 | Added README (HEAD -> master) [Hope9700]
+| * c436b8c 2019-06-10 | Updated index.html (style) [Hope9700]
+| * 97eef7b 2019-06-10 | Hello uses style.css [Hope9700]
+| * 086970a 2019-06-10 | Added css stylesheet [Hope9700]
+|/
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout style
+Switched to branch 'style'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: Added css stylesheet
+Applying: Hello uses style.css
+Applying: Updated index.html
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git hist
+* 0523d7b 2019-06-10 | Updated index.html (HEAD -> style) [Hope9700]
+* f7bf6bb 2019-06-10 | Hello uses style.css [Hope9700]
+* e4b7e7d 2019-06-10 | Added css stylesheet [Hope9700]
+* f29fdfc 2019-06-10 | Added README (master) [Hope9700]
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (style)
+$ git checkout master
+Switched to branch 'master'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git merge style
+Updating f29fdfc..0523d7b
+Fast-forward
+ index.html     | 8 ++++++++
+ lib/hello.html | 1 +
+ lib/style.css  | 3 +++
+ 3 files changed, 12 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 lib/style.css
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git hist
+* 0523d7b 2019-06-10 | Updated index.html (HEAD -> master, style) [Hope9700]
+* f7bf6bb 2019-06-10 | Hello uses style.css [Hope9700]
+* e4b7e7d 2019-06-10 | Added css stylesheet [Hope9700]
+* f29fdfc 2019-06-10 | Added README [Hope9700]
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cd ..
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ pwd
+/c/Users/mostw
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ ls
+'3D Objects'/
+ ansel/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ hello/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TM.blf
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000002.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TM.blf
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Oracle/
+ Pictures/
+ PrintHood@
+ Recent@
+ regwizard.log
+ rstr3.ini
+ rstr4.ini
+ sanct.log
+'Saved Games'/
+ Searches/
+ SendTo@
+ setup_01.ini
+ setup03.log
+ setup04.log
+ setup64.log
+'setup64[1].log'
+ Videos/
+ yafOySko.exe*
+'главное меню'@
+'Мои документы'@
+ Шаблоны@
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git checkout master
+fatal: not a git repository (or any of the parent directories): .git
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ ls
+'3D Objects'/
+ ansel/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ hello/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TM.blf
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000002.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TM.blf
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Oracle/
+ Pictures/
+ PrintHood@
+ Recent@
+ regwizard.log
+ rstr3.ini
+ rstr4.ini
+ sanct.log
+'Saved Games'/
+ Searches/
+ SendTo@
+ setup_01.ini
+ setup03.log
+ setup04.log
+ setup64.log
+'setup64[1].log'
+ Videos/
+ yafOySko.exe*
+'главное меню'@
+'Мои документы'@
+ Шаблоны@
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ ls
+'3D Objects'/
+ ansel/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ hello/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TM.blf
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000002.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TM.blf
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Oracle/
+ Pictures/
+ PrintHood@
+ Recent@
+ regwizard.log
+ rstr3.ini
+ rstr4.ini
+ sanct.log
+'Saved Games'/
+ Searches/
+ SendTo@
+ setup_01.ini
+ setup03.log
+ setup04.log
+ setup64.log
+'setup64[1].log'
+ Videos/
+ yafOySko.exe*
+'главное меню'@
+'Мои документы'@
+ Шаблоны@
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ cd ..
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c/Users
+$ pwd
+/c/Users
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c/Users
+$ ls
+'All Users'@  'Default User'@   mostw/   'Все пользователи'@
+ Default/      desktop.ini      Public/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c/Users
+$ ls
+'All Users'@  'Default User'@   mostw/   'Все пользователи'@
+ Default/      desktop.ini      Public/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c/Users
+$ pwd
+/c/Users
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c/Users
+$ cd ..
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c
+$ pwd
+/c
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c
+$ ls
+'$Recycle.Bin'/
+'$WINRE_BACKUP_PARTITION.MARKER'
+ 00000000000000000000.png
+ 11/
+ 111/
+ 1111/
+ 11111111111111111111111111111111111111111111111111111111111111111111111111.png
+ 111111111111uuuuu/
+ 11ff/
+ 1222324.wxmx
+ 1cdisk/
+ 1DUT/
+ 1Oracle/
+ 22/
+ 222/
+ 3333333333333333333333.png
+ 3лабораторна.docx
+ 5454636.wxmx
+ Apppple/
+ Aрлыки/
+ bbbbbbbbbb.wxmx
+ bink2w64.dll*
+ bootmgr
+ BOOTNXT
+ CA_LIC/
+ common.rpf
+ Config.Msi/
+ d3dcompiler_46.dll*
+ d3dcsx_46.dll*
+ DiscordSetup.exe*
+'Documents and Settings'@
+ dsfzxds].wxmx
+ Episode_Three_Concept_Art_Leaked_Mid_2008_Alyx_1.jpg
+ essp_nt64.exe*
+ everestultimate-discontinued-550-nkjw6b1q0v.exe*
+ far-cry-5-ps4-5.jpg
+ ffffffffffffffffff.wxmx
+ fghethtej.wxmx
+ fghhhhhhhhhhhhhhh.wxmx
+ flashplayer29pp_dd_install.exe*
+ Fraps/
+ frgrg.wxmx
+ Games/
+ GFSDK_ShadowLib.win64.dll*
+ GFSDK_TXAA.win64.dll*
+ GFSDK_TXAA_AlphaResolve.win64.dll*
+ git_tutorial/
+ gordon_freeman_by_kostanryuk-d4eleiv.jpg
+ GPUPerfAPIDX11-x64.dll*
+ GTA5.exe*
+ GTAVLanguageSelect.exe*
+ GTAVLauncher.exe*
+ hiberfil.sys
+ Houses_Evening_Fields_Far_Cry_5_Fence_524163_1280x1024.jpg
+ Inprise/
+ ITunes/
+ iykggblo.wxmx
+ juuuuuuuuuu.wxmx
+ jyyttttttttttttttttttttt.wxmx
+ ktktku.wxmx
+ Lab/
+ Labi/
+ lllllllllll.wxmx
+ luiohjii.wxmx
+ maxima-5.31.2.exe*
+ MmNtkuEiSuA.jpg
+ msdownld.tmp/
+ MSOCache/
+ NvPmApi.Core.win64.dll*
+ ohioi.wxmx
+ olk.wxmx
+ OneDriveTemp/
+'Opera Снимок_2018-05-18_233127_vk.com.png'
+'Opera Снимок_2018-05-18_233402_vk.com.png'
+'OperaSetup (1).exe'*
+ OperaSetup.exe*
+ Or/
+ oraclexe/
+ OriginThinSetup.exe*
+ PerfLogs/
+ PlayGTAV.exe*
+ plllllllllllllllllll.wxmx
+ pppppppppppp.wxmx
+'Program fi'/
+'Program Files'/
+'Program Files (x86)'/
+ ProgramData/
+ qqqqqqqqqq.wxmx
+ Recovery/
+ rmma38bin.exe*
+ sandra.exe*
+ scoped_dir2152_27624/
+ scoped_dir4548_29621/
+ scoped_dir468_16086/
+ scoped_dir468_28257/
+ scoped_dir4688_30337/
+ scoped_dir5092_29847/
+ skyline/
+ Skype-8.14.0.10.exe*
+ SrVfPVXl97w.jpg
+ sssssssssssssssssss.wxmx
+ swapfile.sys
+'System Volume Information'/
+ TEMP/
+ tsetup.1.1.23.exe*
+ tttttttttttttttttttttttttt.wxmx
+ twd/
+ tyh.wxm
+ uiou8o.wxmx
+ ukjihiuo.wxmx
+ Users/
+ uyru.wxmx
+ ValveUnhandledExceptionFilter.txt
+ version.txt
+ vFsTcjqTjj4.jpg
+ Windows/
+ wrar540.exe*
+ yukgyy.wxmx
+'без названия.wxm'
+'без названия.wxmx'
+'без названияujkilhui.wxmx'
+ ЗАГРУЗКИ/
+ йо/
+ йу/
+ йц/
+ кккккккккккккккккк/
+'Лаб. роб. №2. Робочий файл 97.xls'
+'лабораторна 3.docx'
+ нкоооооооооооооооооооооо.wxmx
+ онрооооооооооооооооооооооооо.jpg
+ ппппппппппппппввввввввввввввввввввввв.jpg
+ ппппппппппппппппппппппппппп.jpg
+'ПРАКТИЧНЫЕ АК'/
+'РОЗДIЛ 2 (1).docx'
+'РОЗДIЛ 6.docx'
+'РОЗДИЛ 2 2.docx'
+'РОЗДИЛ 2 3.docx'
+'РОЗДИЛ 2 4 1.docx'
+'роздил 3.docx'
+'роздил 4.docx'
+'роздил 5.docx'
+'роздил 6.docx'
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c
+$ cd ..
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /
+$ pwd
+/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /
+$ cd hello
+bash: cd: hello: No such file or directory
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /
+$ cd c
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c
+$ cd c/users
+bash: cd: c/users: No such file or directory
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c
+$ cd /c/Users/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 /c/Users
+$ cd /c/Users/mostw/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ cd /c/Users/mostw/hello/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ pwd
+/c/Users/mostw/hello
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ ls
+index.html  lib/  README  README.txt
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cd /c/Users/mostw/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ pwd
+/c/Users/mostw
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ ls
+'3D Objects'/
+ ansel/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ hello/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TM.blf
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000002.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TM.blf
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Oracle/
+ Pictures/
+ PrintHood@
+ Recent@
+ regwizard.log
+ rstr3.ini
+ rstr4.ini
+ sanct.log
+'Saved Games'/
+ Searches/
+ SendTo@
+ setup_01.ini
+ setup03.log
+ setup04.log
+ setup64.log
+'setup64[1].log'
+ Videos/
+ yafOySko.exe*
+'главное меню'@
+'Мои документы'@
+ Шаблоны@
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ ls
+'3D Objects'/
+ ansel/
+ AppData/
+'Application Data'@
+ cloned_hello/
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ hello/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TM.blf
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000002.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TM.blf
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Oracle/
+ Pictures/
+ PrintHood@
+ Recent@
+ regwizard.log
+ rstr3.ini
+ rstr4.ini
+ sanct.log
+'Saved Games'/
+ Searches/
+ SendTo@
+ setup_01.ini
+ setup03.log
+ setup04.log
+ setup64.log
+'setup64[1].log'
+ Videos/
+ yafOySko.exe*
+'главное меню'@
+'Мои документы'@
+ Шаблоны@
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git clone hello cloned_hello
+Cloning into 'cloned_hello'...
+done.
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ ls
+'3D Objects'/
+ ansel/
+ AppData/
+'Application Data'@
+ cloned_hello/
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ hello/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TM.blf
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{89c50b77-56ee-11e9-b85a-60a44c3b93ac}.TMContainer00000000000000000002.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TM.blf
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Oracle/
+ Pictures/
+ PrintHood@
+ Recent@
+ regwizard.log
+ rstr3.ini
+ rstr4.ini
+ sanct.log
+'Saved Games'/
+ Searches/
+ SendTo@
+ setup_01.ini
+ setup03.log
+ setup04.log
+ setup64.log
+'setup64[1].log'
+ Videos/
+ yafOySko.exe*
+'главное меню'@
+'Мои документы'@
+ Шаблоны@
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ cd cloned_hello
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ ls
+index.html  lib/  README
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git hist --all
+* 0523d7b 2019-06-10 | Updated index.html (HEAD -> master, origin/style, origin/master, origin/HEAD) [Hope9700]
+* f7bf6bb 2019-06-10 | Hello uses style.css [Hope9700]
+* e4b7e7d 2019-06-10 | Added css stylesheet [Hope9700]
+* f29fdfc 2019-06-10 | Added README [Hope9700]
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git remote
+origin
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: C:/Users/mostw/hello
+  Push  URL: C:/Users/mostw/hello
+  HEAD branch: master
+  Remote branches:
+    master tracked
+    style  tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git branch
+* master
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/style
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ cd hello
+bash: cd: hello: No such file or directory
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ cd /c/Users/mostw/hello
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add README
+
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Changed README in original repo"
+[master 25cd6f5] Changed README in original repo
+ 1 file changed, 2 insertions(+)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cd /c/Users/mostw/cloned_hello'
+
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ cd /c/Users/mostw/cloned_hello
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git fetch
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git hist --all
+* 25cd6f5 2019-06-10 | Changed README in original repo (origin/master, origin/HEAD) [Hope9700]
+* 0523d7b 2019-06-10 | Updated index.html (HEAD -> master, origin/style) [Hope9700]
+* f7bf6bb 2019-06-10 | Hello uses style.css [Hope9700]
+* e4b7e7d 2019-06-10 | Added css stylesheet [Hope9700]
+* f29fdfc 2019-06-10 | Added README [Hope9700]
+* 2be3e58 2019-06-09 | Moved hello.html to lib [Hope9700]
+* 8a38b32 2019-06-09 | Add an author/email comment [Hope9700]
+* 0568a2d 2019-06-09 | Added HTML header (tag: v1) [Hope9700]
+* 02e5a39 2019-06-09 | Added standard HTML page tags (tag: v1-beta) [Hope9700]
+* be7bfdf 2019-06-09 | Added h1 tag [Hope9700]
+* 8da0398 2019-06-09 | First Commit [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ cat README
+This is the Hello World example from the git tutorial.
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git merge origin/master
+error: Your local changes to the following files would be overwritten by merge:
+        README
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 0523d7b..25cd6f5
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git commit "rt"
+error: pathspec 'rt' did not match any file(s) known to git
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git commit "README"
+Aborting commit due to empty commit message.
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git merge origin/master
+error: Your local changes to the following files would be overwritten by merge:
+        README
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 0523d7b..25cd6f5
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git branch --track style origin/style
+Branch 'style' set up to track remote branch 'style' from 'origin'.
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git branch -a
+* master
+  style
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/style
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git hist --max-count=2
+* 0523d7b 2019-06-10 | Updated index.html (HEAD -> master, origin/style, style) [Hope9700]
+* f7bf6bb 2019-06-10 | Hello uses style.css [Hope9700]
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ cd /c/Users/mostw
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git clone --bare hello hello.git
+Cloning into bare repository 'hello.git'...
+done.
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ ls hello.git
+config  description  HEAD  hooks/  info/  objects/  packed-refs  refs/
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ cd hello
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git remote add shared /c/Users/mostw/hello.git
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git checkout master
+Already on 'master'
+M       README
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git add README
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git commit -m "Added shared comment to readme"
+[master 218a183] Added shared comment to readme
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ git push shared master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 404 bytes | 134.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To C:/Users/mostw/hello.git
+   25cd6f5..218a183  master -> master
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/hello (master)
+$ cd /c/Users/mostw/cloned_hello
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git remote add shared /c/Users/mostw/hello.git
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git branch --track shared master
+Branch 'shared' set up to track local branch 'master'.
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ git pull shared master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From C:/Users/mostw/hello
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> shared/master
+error: Your local changes to the following files would be overwritten by merge:
+        README
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 0523d7b..218a183
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ cat README
+This is the Hello World example from the git tutorial.
+mostw@DESKTOP-Q7GNLVG MINGW64 ~/cloned_hello (master)
+$ cd /c/Users/mostw
+
+mostw@DESKTOP-Q7GNLVG MINGW64 ~
+$ git daemon --verbose --export-all --base-path=.
+[3204] Ready to rumble
+
